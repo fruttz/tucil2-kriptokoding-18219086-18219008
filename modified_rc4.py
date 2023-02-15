@@ -107,7 +107,7 @@ def encrypt(plain):
         j = (j + S[i]) % 256
         S[i], S[j] = S[j], S[i]
         temp = (S[i] + S[j]) % 256
-        u = S[t]
+        u = S[temp]
         cipher_bytes = u ^ ord(plain[idx])
         cipher += chr(cipher_bytes)
     cipher = xor_text(cipher, LFSR(cipher, S))
