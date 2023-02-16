@@ -40,7 +40,7 @@ def write_file(filename, content):
             bytes.append(byte)
         file.write(b"".join(bytes))
 
-# Modified RC4
+# My Own Stream Cipher
 key = None
 def get_key(key_input):
     global key
