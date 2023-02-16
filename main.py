@@ -47,15 +47,15 @@ class encrypt_screen(QDialog):
     def toggle_button2(self):
         self.button_state(self.inputButton_2)
     
-    def button_state(self, button):
-        if button.text() == "File":
-            if button.isChecked():
+    def button_state(self, b):
+        if b.text() == "File":
+            if b.isChecked():
                 self.inputKeyboardField.setReadOnly(True)
                 self.inputFileButton.setEnabled(True)
                 self.fileInputMethod = "File"
                 self.inputKeyboardField.setText("")
-        elif button.text == "Keyboard":
-            if button.isChecked():
+        elif b.text() == "Keyboard":
+            if b.isChecked():
                 self.inputKeyboardField.setReadOnly(False)
                 self.inputFileButton.setEnabled(False)
                 self.fileInputMethod = "Keyboard"
@@ -107,15 +107,15 @@ class decrypt_screen(QDialog):
     def toggle_button2(self):
         self.button_state(self.inputButton_2)
     
-    def button_state(self, button):
-        if button.text() == "File":
-            if button.isChecked():
+    def button_state(self, b):
+        if b.text() == "File":
+            if b.isChecked():
                 self.inputKeyboardField.setReadOnly(True)
                 self.inputFileButton.setEnabled(True)
                 self.fileInputMethod = "File"
                 self.inputKeyboardField.setText("")
-        elif button.text == "Keyboard":
-            if button.isChecked():
+        elif b.text() == "Keyboard":
+            if b.isChecked():
                 self.inputKeyboardField.setReadOnly(False)
                 self.inputFileButton.setEnabled(False)
                 self.fileInputMethod = "Keyboard"
